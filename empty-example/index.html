@@ -6,11 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>p5.js example</title>
   <style>
-    body {
+    *{
       padding: 0;
       margin: 0;
-      background-color: #1b1b1b;
     }
+
+    body {
+      height: 100vh; /* 子元素居中的关键-------让body占满整个视口高度 */
+      background-color: white;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+
   </style>
   <script src="../lib/p5.min.js"></script>
   <!-- <script src="../addons/p5.sound.js"></script> -->
@@ -18,8 +26,6 @@
 </head>
 
 <body>
-  <main>
-  </main>
-</body>
 
+</body>
 </html>
