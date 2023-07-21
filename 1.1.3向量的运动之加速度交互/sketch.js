@@ -5,16 +5,17 @@ class Mover{
     this.speed = initSpeed.copy();
     this.acc = p5.Vector.random2D();
     this.speedMag = this.speed.mag();
-    this.topSpeed = 45;
+    this.topSpeed = 25;
   }
 
   applyMouse(){
     const mouse = createVector(mouseX,mouseY);
     const sub = p5.Vector.sub(mouse,this.position);
     sub.normalize();
-    sub.setMag(20);
+    sub.setMag(10);
 
-    this.acc.add(sub);
+    this.acc = sub;
+    // this.acc.add(sub);
   }
 
   update(){
