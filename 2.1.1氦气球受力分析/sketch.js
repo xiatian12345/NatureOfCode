@@ -68,7 +68,7 @@ function draw() {
   let randUD = noise(bolinUD) - 0.5;//-0.5 到 0.5之间
   let randLR = noise(bolinLR) - 0.5;//-0.5 到 0.5之间
 
-  let wind = createVector(100 * randLR,100 * randUD);
+  let wind = createVector(30 * randLR,30 * randUD);
   balloon.applyForce(wind);
 
   //重力(向下)
