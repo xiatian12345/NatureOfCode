@@ -82,6 +82,6 @@ function setup() {
   Render.run(render)
   // 8. 创建运行方法
   let runner = Runner.create()
-  // 9. 运行渲染器
+  // 9. 运行Runner，让matter中有时间概念
   Runner.run(runner, engine)
 }

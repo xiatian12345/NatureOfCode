@@ -22,7 +22,7 @@ function setup() {
   Composite.add(engine.world, [boxA, boxB, ground]);
   // 4. 创建运行方法
   let runner = Runner.create();
-  // 5. 运行渲染器
+  // 5. 运行Runner，让matter中有时间概念
   Runner.run(runner, engine);
 }
 

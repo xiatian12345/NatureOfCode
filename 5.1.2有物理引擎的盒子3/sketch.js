@@ -35,7 +35,7 @@ function setup() {
   engine = Engine.create();
   // 2. 创建运行方法
   runner = Runner.create();
-  // 3. 运行渲染器
+  // 3. 运行Runner，让matter中有时间概念
   Runner.run(runner, engine);
 }
 
