@@ -3,13 +3,14 @@ class Util{
 }
 //求某个点到两个点所连线段的法线交点
 Util.getNormalPoint = function(startPos,endPos,centerPos){
+  let p = p5.Vector.sub(centerPos, startPos);
   let dir = p5.Vector.sub(endPos,startPos);
-  //投影长度
-  let theta = p5.Vector.sub(centerPos,startPos).heading();
-  let projectionLen = p5.Vector.dist(startPos,centerPos) * Math.cos(theta);
-  let ret = p5.Vector.add((dir.normalize().mult(projectionLen)),startPos);
-  return ret;
+  dir.normalize();
+  dir.mult(p.dot(dir));
+  let normalPoint = p5.Vector.add(startPos, dir);
+  return normalPoint;
 }
+
 
 class Vehicle{
   constructor(pos,path){
