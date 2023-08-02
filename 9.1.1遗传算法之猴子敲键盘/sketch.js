@@ -74,7 +74,7 @@ class Monkey{
 //种群
 class Community{
   constructor(communityCount,pos){
-    this.pos = pos || createVector(3 * width/4+60,20);
+    this.pos = pos || createVector(width/2,20);
     this.arr = [];
     this.communityCount = communityCount;
     //交配池
@@ -123,7 +123,7 @@ class Community{
   generateRandom(){
     this.arr = [];
     for(let i = 0;i < this.communityCount;i ++){
-      let x = Math.floor(i/50) * -150;
+      let x = Math.floor(i/50) * 150;
       let j = i % 50;
       let y = j * 12;
       let pos = p5.Vector.add(this.pos,createVector(x,y));
@@ -286,11 +286,11 @@ function getRandomC(){
 }
 
 let ga = null;
-let communityCount = 150;
+let communityCount = 1150;
 let averateFitness = 0;
 let genCount = 0;
-// let target = 'to be or not to be';//大概3000代才能实现目标
-let target = 'to be or not';//大概300代能实现目标
+let target = 'to be or not to be';//大概3000代才能实现目标
+// let target = 'to be or not';//大概300代能实现目标
 // let target = 'to be';//大概几十代即可实现目标
 
 
